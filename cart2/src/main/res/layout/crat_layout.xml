@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="10dp"
+    app:contentPadding="10dp"
+    app:cardBackgroundColor="#ffffff"
+    android:layout_height="wrap_content"
+    tools:context=".CartActivity">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            app:layout_constraintLeft_toRightOf="@id/checkbox"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="商品名称"
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/cart_xrv"
+            app:layout_constraintTop_toBottomOf="@id/checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.jcodecraeer.xrecyclerview.XRecyclerView>
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
